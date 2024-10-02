@@ -3,15 +3,15 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "paper"
-version = "0.0.1"
-description = "Paper - Pytorch"
+name = "lfm-torch"
+version = "0.0.2"
+description = "lfm - Pytorch"
 license = "MIT"
 authors = ["Kye Gomez <kye@apac.ai>"]
-homepage = "https://github.com/kyegomez/paper"
-documentation = "https://github.com/kyegomez/paper"  # Add this if you have documentation.
+homepage = "https://github.com/kyegomez/lfm"
+documentation = "https://github.com/kyegomez/lfm"  # Add this if you have documentation.
 readme = "README.md"  # Assuming you have a README.md
-repository = "https://github.com/kyegomez/paper"
+repository = "https://github.com/kyegomez/lfm"
 keywords = ["artificial intelligence", "deep learning", "optimizers", "Prompt Engineering"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -23,11 +23,9 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-swarms = "*"
-zetascale = "*"
+torch = "*"
+loguru = "*"
 
-[tool.poetry.dev-dependencies]
-# Add development dependencies here
 
 
 [tool.poetry.group.lint.dependencies]

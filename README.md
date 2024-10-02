@@ -6,6 +6,40 @@
 
 **Welcome to the open-source implementation of Liquid Foundation Models (LFMs)** — the next generation of multi-modal, adaptive AI systems. LFMs represent a breakthrough in model architecture design, specifically tailored to meet the evolving demands of real-world applications across different modalities such as text, audio, image, and video. [The article provides some implementation details](https://www.liquid.ai/liquid-foundation-models)
 
+
+## Installation
+```bash
+$ pip3 install -U lfm-torch
+```
+
+## Usage
+
+```python
+import torch
+from lfm_torch.model import LFModel
+from loguru import logger
+
+# Instantiate and test the model
+if __name__ == "__main__":
+    batch_size, seq_length, embedding_dim = 32, 128, 512
+    token_dim, channel_dim, expert_dim, adapt_dim, num_experts = (
+        embedding_dim,
+        embedding_dim,
+        embedding_dim,
+        128,
+        4,
+    )
+    model = LFModel(
+        token_dim, channel_dim, expert_dim, adapt_dim, num_experts
+    )
+
+    input_tensor = torch.randn(
+        batch_size, seq_length, embedding_dim
+    )  # 3D text tensor
+    output = model(input_tensor)
+    logger.info("Model forward pass complete.")
+```
+
 ## Overview
 
 The Liquid Foundation Models are a series of generative AI models designed with an entirely new architecture, optimized for performance, scalability, and efficiency across a wide variety of hardware platforms and modalities. Unlike traditional GPT-based models, LFMs introduce a novel computational paradigm that redefines how we approach token and channel mixing, weight sharing, feature sharing, and adaptive computation, making them suitable for a broader range of applications.
