@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from loguru import logger
 from typing import Optional, Tuple
-
+from torch.nn.functional as F
 
 class AdaptiveLinear(nn.Module):
     """
