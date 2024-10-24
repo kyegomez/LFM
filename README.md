@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
 
 ## Liquid Transformer 
-Integrating transformers with lfms + mixture of experts. Very experimental and early!
+Integrating transformers with lfms + mixture of experts. Very experimental and early! We're working on a training script [here](./liquid_transformer_train.py). It still needs an actual tokenizer like llama's tokenizer but it's getting there. If you can help with this then let me know.
 
 
 ```python
