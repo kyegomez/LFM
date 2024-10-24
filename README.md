@@ -1,4 +1,3 @@
-<!-- [![Multi-Modality](agorabanner.png)](https://discord.com/servers/agora-999382051935506503) -->
 
 # Liquid Foundation Models [LFMs]
 
@@ -68,3 +67,7 @@ if __name__ == "__main__":
 
 # Citations
 - All credit for the liquid transformer architecture goes to the original authors: [Google](https://arxiv.org/abs/2402.05385)
+
+
+# License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
