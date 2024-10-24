@@ -40,7 +40,50 @@ if __name__ == "__main__":
 
 
 ## Liquid Transformer 
-Integrating transformers with lfms + mixture of experts. Very experimental and early! We're working on a training script [here](./liquid_transformer_train.py). It still needs an actual tokenizer like llama's tokenizer but it's getting there. If you can help with this then let me know.
+A novel neural architecture combining Liquid Neural Networks, Transformer attention mechanisms, and Mixture of Experts (MoE) for enhanced adaptive processing and dynamic state updates. Very experimental and early! We're working on a training script [here](./liquid_transformer_train.py). It still needs an actual tokenizer like llama's tokenizer but it's getting there. If you can help with this then let me know.
+
+
+### Architecture Overview
+
+```mermaid
+flowchart TB
+    subgraph "Liquid Transformer"
+        Input["Input Sequence"] --> TL["Transformer Layer"]
+        
+        subgraph "Transformer Layer"
+            direction TB
+            MHA["Multi-Head Attention"] --> LC["Liquid Cell"]
+            LC --> MOE["Mixture of Experts"]
+            MOE --> LN["Layer Norm + Residual"]
+        end
+        
+        subgraph "Liquid Cell Details"
+            direction LR
+            HS["Hidden State"] --> WH["W_h Linear"]
+            Input2["Input"] --> WI["W_in Linear"]
+            WH --> Add((+))
+            WI --> Add
+            Add --> Act["Activation"]
+            Act --> LN2["LayerNorm"]
+            LN2 --> DO["Dropout"]
+        end
+        
+        subgraph "MoE Details"
+            direction TB
+            Input3["Input"] --> Gate["Gating Network"]
+            Input3 --> E1["Expert 1"]
+            Input3 --> E2["Expert 2"]
+            Input3 --> E3["Expert N"]
+            Gate --> Comb["Weighted Combination"]
+            E1 --> Comb
+            E2 --> Comb
+            E3 --> Comb
+        end
+        
+        TL --> Output["Output Sequence"]
+    end
+```
+
 
 
 ```python
@@ -64,6 +107,7 @@ if __name__ == "__main__":
     output = model(x)
     logger.info(f"Model output shape: {output.shape}")
 ```
+
 
 # Citations
 - All credit for the liquid transformer architecture goes to the original authors: [Google](https://arxiv.org/abs/2402.05385)
