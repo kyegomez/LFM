@@ -110,7 +110,7 @@ if __name__ == "__main__":
 
 
 # Citations
-- All credit for the liquid transformer architecture goes to the original authors: [Google](https://arxiv.org/abs/2402.05385)
+- All credit for the liquid transformer architecture goes to the original authors:  [Discover more about the model from the original article](https://www.liquid.ai/liquid-foundation-models)
 
 
 # License
