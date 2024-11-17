@@ -3,7 +3,8 @@
 
 [![Join our Discord](https://img.shields.io/badge/Discord-Join%20our%20server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/agora-999382051935506503) [![Subscribe on YouTube](https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@kyegomez3242) [![Connect on LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kye-g-38759a207/) [![Follow on X.com](https://img.shields.io/badge/X.com-Follow-1DA1F2?style=for-the-badge&logo=x&logoColor=white)](https://x.com/kyegomezb)
 
-**Welcome to the open-source implementation of Liquid Foundation Models (LFMs)** — pioneering the frontier of real-time learning in AI. LFMs are designed to adapt and learn on-the-fly, continuously evolving their knowledge and capabilities as they interact with new data. This real-time learning approach allows LFMs to stay current and relevant in rapidly changing environments, making them ideal for applications that require up-to-the-minute intelligence and adaptability. Whether processing streaming text, analyzing live audio, interpreting real-time video feeds, or responding to dynamic image inputs, LFMs excel at absorbing and applying new information instantaneously. [Discover more about the model from the original article](https://www.liquid.ai/liquid-foundation-models)
+This is an attempt to make an open source implementation of LFMs, this is obviously not the official repository because it's closed source. I link papers below which I am using as a referrence.
+[Discover more about the model from the original article](https://www.liquid.ai/liquid-foundation-models)
 
 ## Installation
 ```bash
@@ -111,6 +112,8 @@ if __name__ == "__main__":
 
 # Citations
 - All credit for the liquid transformer architecture goes to the original authors from liquid.ai
+- https://arxiv.org/abs/2209.12951
+- 
 
 # License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
