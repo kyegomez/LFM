@@ -110,8 +110,7 @@ if __name__ == "__main__":
 
 
 # Citations
-- All credit for the liquid transformer architecture goes to the original authors:  [Discover more about the model from the original article](https://www.liquid.ai/liquid-foundation-models)
-
+- All credit for the liquid transformer architecture goes to the original authors from liquid.ai
 
 # License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
