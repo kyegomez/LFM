@@ -3,7 +3,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 from loguru import logger
 from typing import List, Dict
-
 class AdaptiveLinear(nn.Module):
     def __init__(self, in_features: int, out_features: int, adapt_dim: int):
         super(AdaptiveLinear, self).__init__()
